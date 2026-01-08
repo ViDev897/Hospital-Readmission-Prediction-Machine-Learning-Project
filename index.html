@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Readmission Prediction System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+        <!-- Header Navigation -->
+        <header class="header">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        <span class="logo-text">Hospital Readmissions</span>
+                    </div>
+                    
+                    <nav class="nav-center">
+                        <a href="#home" class="nav-link">Home</a>
+                        <a href="#about" class="nav-link">About</a>
+                    </nav>
+                    
+                    <div class="nav-auth">
+                        <button class="btn btn--outline btn--sm">Sign In</button>
+                        <button class="btn btn--primary btn--sm">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <div class="hero-section">
+                    <div class="hero-left">
+                        <h1 class="hero-title">
+                            Hospital Readmission <span class="text-primary">Prediction System</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Our AI-Powered platform helps healthcare providers predict patient readmissions, 
+                            improve outcomes, and deliver better care through data-driven decisions.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <button id="dashboard-btn" class="btn btn--primary btn--lg">Dashboard</button>
+                            <button class="btn btn--outline btn--lg">Learn More</button>
+                        </div>
+                        
+                        <div class="feature-badges">
+                            <span class="badge">AI-Powered</span>
+                            <span class="badge">Real-Time</span>
+                            <span class="badge">Secure</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-right">
+                        <div class="risk-panel">
+                            <div class="risk-header">
+                                <h3>Readmission Risk Analysis</h3>
+                                <p>AI-powered prediction model</p>
+                            </div>
+                            
+                            <div class="risk-bars">
+                                <div class="risk-item">
+                                    <div class="risk-label">
+                                        <span class="risk-text">Low Risk</span>
+                                        <span class="risk-percentage">10%</span>
+                                    </div>
+                                    <div class="risk-bar">
+                                        <div class="risk-fill low-risk" style="width: 10%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="risk-item">
+                                    <div class="risk-label">
+                                        <span class="risk-text">Medium Risk</span>
+                                        <span class="risk-percentage">20%</span>
+                                    </div>
+                                    <div class="risk-bar">
+                                        <div class="risk-fill medium-risk" style="width: 20%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="risk-item">
+                                    <div class="risk-label">
+                                        <span class="risk-text">High Risk</span>
+                                        <span class="risk-percentage">5%</span>
+                                    </div>
+                                    <div class="risk-bar">
+                                        <div class="risk-fill high-risk" style="width: 5%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="avatar-row">
+                                <div class="avatar"></div>
+                                <div class="avatar"></div>
+                                <div class="avatar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Overview Section -->
+                <section class="project-overview">
+                    <div class="overview-header">
+                        <h2>Project Overview</h2>
+                        <p>Understanding the challenge and our approach to solving hospital readmission prediction</p>
+                    </div>
+                    
+                    <div class="overview-cards">
+                        <div class="overview-card problem-card">
+                            <h3>Problem Statement</h3>
+                            <p>Hospital readmissions are a major concern for healthcare providers, affecting patient outcomes and increasing costs.</p>
+                        </div>
+                        
+                        <div class="overview-card dataset-card">
+                            <h3>Dataset & Training</h3>
+                            <p>Our model is trained on comprehensive patient data to provide accurate readmission risk predictions.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard-page" class="page hidden">
+        <!-- Header Navigation -->
+        <header class="header">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        <span class="logo-text">Hospital Readmissions</span>
+                    </div>
+                    
+                    <nav class="nav-center">
+                        <a href="#home" id="home-link" class="nav-link">Home</a>
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#dashboard" class="nav-link">Dashboard</a>
+                    </nav>
+                    
+                    <div class="nav-auth">
+                        <button class="btn btn--outline btn--sm">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <main class="dashboard-content">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h1>Dashboard</h1>
+                    <div class="input-actions">
+                        <span class="input-label">Provide Input</span>
+                        <div class="input-buttons">
+                            <button class="btn btn--primary btn--sm">Upload Excel</button>
+                            <button class="btn btn--outline btn--sm">Manual Entry</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="upload-section">
+                    <div class="upload-area" id="upload-area">
+                        <div class="upload-content">
+                            <svg class="upload-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
+                            <h3>Click to upload or drag and drop</h3>
+                            <p>XLS or XLSX</p>
+                        </div>
+                        <input type="file" id="file-input" class="file-input" accept=".xls,.xlsx">
+                    </div>
+                    
+                    <div class="upload-actions">
+                        <button id="browse-btn" class="btn btn--primary">Browse</button>
+                        <button id="sample-btn" class="btn btn--outline">Use random sample</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
